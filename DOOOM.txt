@@ -1,0 +1,96 @@
+# The DOM represents a document with a 
+logical tree.
+# Each branch of the tree ends in a node ,and each node contains objects.
+# DOM methods allow programmers access to the tree.
+# Using them, you can change the document's structure, style, or content.
+# Nodes can also have event handlers attached to them.
+# Once an event is triggered, the event handlers get executed.
+
+# applying different effects like show, hide, animations etc...
+# To perform any action we need to find or select the targeted HTML element.
+    
+
+        # methodds of select the targeted HTML element#
+
+# The Document method querySelector()
+   Syntax: Syntax: element = document.querySelector(selectors)
+      (If no matches are found, null is returned.)
+      ex: var el = document.querySelector('h1');
+          console.log('el:', el);
+
+# The Document method getElementById()
+   Syntax: Syntax: element = document.getElementById(id)
+      ex: var el = document.getElementById('middleSpan');
+          console.log('el:', el);
+, they're a useful way to get access to a specific element quickly.
+
+# querySelectorall()
+    Syntax: elementList = parentNode.querySelectorAll(selectors); 
+       ex:  var el = document.querySelectorAll('span');
+            console.log('el:', el);
+             (output NodeList(3) [span, span#middleSpan, span])
+representing a list of the document's elements that match the specified group of selectors.
+
+# getElementsByClassName()
+    Syntax: elementList = document.getElementsByClassName(names);
+       ex:  var el = document.getElementsByClassName('ex:text-desc');
+            console.log('el:', el);
+
+ 
+# getElementsByTagName()
+    Syntax: elementList = document.getElementsByTagName(name);
+       ex:  var el = document.getElementsByTagName('span');
+       console.log('el:', el);
+       (output: HTMLCollection(3) [span.text-desc, span.text-desc, span])
+  
+# Get the attribute value of an element
+     Syntax: var withoutStyleElClassName = withoutStyleEl.getAttribute('class');
+      console.log('withoutStyleElClassName:', withoutStyleElClassName);
+          (withoutStyleElClassName: null)
+     The getAttribute() method is used to get the current value of an element’s attribute.
+     If the specified attribute does not exist on the element, it will return null.
+# Add Events
+ Events are actions that occur as a result of the user’s action
+ or as result of state change of the elements of a DOM tree.
+ For example: click, load, focusin, focusout. These are all events that help us react with JavaScript
+
+
+# Event types
+here are some of the most common event types and event names:
+
+mouse events (MouseEvent): mousedown, mouseup, click, dblclick, mousemove, mouseover, mousewheel, mouseout, contextmenu
+keyboard events (KeyboardEvent): keydown, keypress, keyup
+form events: focus, blur, change, submit
+window events: scroll, resize, hashchange, load, unload 
+
+example de fonction
+ex 1
+<script>
+let newDiv = document.createElement('div');
+let newContent = document.createTextNode('Hi, how are you doing?');
+newDiv.appendChild(newContent);
+let currentDiv = document.getElementById('main');
+document.body.appendChild(newDiv, currentDiv);
+</script>
+
+ex 2
+<button id="myBtn">Click Me</button>
+<script>
+function firstFunction() {
+alert("The first function executed successfully!");}
+function secondFunction() {
+alert("The second function executed successfully");}
+let btn = document.getElementById("myBtn");
+btn.onclick = firstFunction;
+btn.onclick = secondFunction;
+</script>
+
+ ex3 validation form
+function validateForm(e) {
+ e.preventDefault()
+ var name = document.loginForm.name.value
+ var password = document.loginForm.password.value
+if (name.length==0)
+ return alert(`name is required`)
+if (password.length<5)
+ return alert(`password length should more than 5`)

@@ -1,0 +1,24 @@
+Recap
+Woohoo, congratulations! We have mastered the linear data structure.
+
+During this super skill, we have seen what we called the static structure:
+The array and matrix (they are called like that due to their static length),
+The string which is an array of characters with specific methods (like concat),
+The structure (Struct) which the one that gives us the ability to create our own structure.
+The abstract data structure like stacks and queues.
+The hash table which refers to a dictionary or a map in programming languages, which is used to store a key-value map.
+The linked list which is a dynamic data structure.
+
+ALGO 3
+
+Parameters are the names of the information that is used in a function or procedure
+An argument is a value that is passed into a function or procedure
+
+Recap
+Congratulation!
+
+Now, we have mastered the procedural programming which is the solution that makes our way of programming much more efficient.
+Il also help us produce more readable and easy to maintain algorithm.
+We have also set the difference between function and procedure.
+And finally, we have learned how to make procedure and function communicate with each other using the parameter ticket
+
